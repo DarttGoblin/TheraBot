@@ -21,7 +21,7 @@ no.onclick = function () {
 }
 
 async function DiagnoseSymptom() {
-    return fetch('http://localhost:3001', {
+    return fetch('https://thera-bot-diagnosis-server.vercel.app/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ async function DiagnoseSymptom() {
 
 async function ProvideMedication(confirmed_disease) {
     try {
-        const response = await fetch('http://localhost:3002', {
+        const response = await fetch('https://thera-bot-medication-server.vercel.app/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ confirmed_disease }),
@@ -75,7 +75,7 @@ async function ProvideMedication(confirmed_disease) {
 }
 
 function CreatePrescription(confirmed_disease) {
-    fetch('http://localhost:3003', {
+    fetch('https://thera-bot-prescription-server.vercel.app/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ confirmed_disease }),
