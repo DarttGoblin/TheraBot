@@ -218,6 +218,7 @@
     }
 
     .pre-button {
+        font-weight: normal;
         font-size: 18px;
         padding: 10px 12px 12px 12px;
     }
