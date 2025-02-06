@@ -90,7 +90,7 @@ function CreatePrescription(confirmed_disease) {
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'prescription.pdf';
+        a.download = 'Prescription.pdf';
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);
